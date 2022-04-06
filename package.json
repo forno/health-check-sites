@@ -3,7 +3,10 @@
     "description": "replaced-by-user-input",
     "version": "0.0.1",
     "private": true,
-    "dependencies": {},
+    "dependencies": {
+        "node-fetch": "^3.2.3"
+    },
+    "type": "module",
     "devDependencies": {
         "jest": "^26.6.3"
     },
