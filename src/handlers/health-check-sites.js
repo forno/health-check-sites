@@ -8,7 +8,7 @@ const webhookurl = process.env.WEBHOOK_URL
  */
 export const healthCheckSites = async (event, context) => {
   console.debug(event, targets, webhookurl)
-  targets.map(async (target) => {
+  await Promise.all(targets.map(async (target) => {
     await fetch(webhookurl, {method: 'post', body: JSON.stringify({text: target})})
-  })
+  }))
 }
