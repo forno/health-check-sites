@@ -6,8 +6,7 @@ const webhookurl = process.env.WEBHOOK_URL
 /**
  * A Lambda function that check health of some sites
  */
-export const healthCheckSites = async (event, context) => {
-  console.debug(event, targets, webhookurl)
+export const healthCheckSites = async () => {
   await Promise.all(targets.map(async (target) =>
     fetch(target).catch(e =>
       fetch(
