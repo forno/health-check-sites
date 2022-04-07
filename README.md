@@ -1,5 +1,16 @@
 # health-check-sites
 
+# 説明
+AWS SAMで管理されるcron式で実行されるLambda functoinのアプリケーションです。
+template.yamlにcron式が定義されています。
+Lambda Functionの本体はsrc/handlers/health-check-sites.jsです。
+
+環境変数はTARGETSとWEBHOOK_URLの二つです。
+TARGETSにカンマ区切りの検証対象URLを入れます。
+WEBHOOK_URLにslackのWEBHOOK URLを入れます。
+
+# SAM Information
+
 This project contains source code and supporting files for a serverless application that you can deploy with the AWS Serverless Application Model (AWS SAM) command line interface (CLI). It includes the following files and folders:
 
 - `src` - Code for the application's Lambda function.
