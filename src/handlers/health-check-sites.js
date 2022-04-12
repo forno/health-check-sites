@@ -27,4 +27,5 @@ ${targets.join('\n')}`)
       )
     ))
   ])
+  return {success: true}
 }
